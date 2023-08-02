@@ -25,6 +25,7 @@ class ProductCategory(Core):
 
 
 class ProductImage(Core):
+    slug, title = None, None
     product_id = models.ForeignKey('Product', models.CASCADE, 'product_image')
     is_general = models.BooleanField(default=False)
     image = models.ImageField(upload_to='shop/')
