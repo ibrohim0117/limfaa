@@ -67,9 +67,11 @@ class Contact(TemplateView):
         if form.is_valid():
             data = form.cleaned_data
             m = f'''📥 New mail\n📩 From: {data['email']}\n👱 Name: {data['name']}\n📢 Subject: {data['subject']}\n📄 Message: {data['text']}'''
-            l = [1038185913, 5467465403, 5553781606]
+            l = [1038185913]
+            # , 5467465403, 5553781606
             for i in l:
                 send_message(i, m)
+
         return self.get(request, *args, **kwargs)
 
 

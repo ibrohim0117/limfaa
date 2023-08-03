@@ -3,10 +3,11 @@ from user.views import ShoppingCart, Index, WishList, LoginRegister, ProductDeta
     ShopLeft, ShopRight, ShopList, ShopListLeft, SingleProduct, SingleProductAffiliate, \
     SingleProductCarousel, SingleProductGalleryLeft, SingleProductGroup, SingleProductNormal, \
     SingleProductSale, SingleProductTabStyleTop, \
-    UserLoginView, AboutUs
+    UserLoginView, AboutUs, Contact
 
 urlpatterns = [
     path('user/aboutus/', AboutUs.as_view(), name='aboutus'),
+    path('user/aboutus/', Contact.as_view(), name='contact'),
     path('user/login-register/', LoginRegister.as_view(), name='login-register'),
     path('user/login-register/', UserLoginView.as_view(), name='login'),
     path('user/product-details/', ProductDetails.as_view(), name='product-details'),

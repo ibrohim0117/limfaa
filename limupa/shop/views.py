@@ -1,8 +1,10 @@
-from django.views.generic import TemplateView, ListView
+from pydoc import render_doc
+
+from django.views.generic import TemplateView, ListView, View
 from shop.models import GeneralProductCategory
 from user.forms import OurTeamForm
 from user.models import OurTeam
-
+from django.shortcuts import render
 
 class W404(TemplateView):
     template_name = '404.html'
@@ -34,8 +36,8 @@ class Compare(TemplateView):
     template_name = 'compare.html'
 
 
-class Contact(TemplateView):
-    template_name = 'contact.html'
+# class Contact(TemplateView):
+#     template_name = 'contact.html'
 
 
 class Faq(TemplateView):
