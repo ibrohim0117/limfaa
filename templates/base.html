@@ -288,19 +288,21 @@
                                 </li>
                                 <li class="megamenu-holder"><a href="{% url 'shop-left' %}">Shop</a>
                                     <ul class="megamenu hb-megamenu">
-                                        <li>
-
+                                        {% for general in object_list %}
+                                        <li><a href="#">{{ general.title }}</a>
                                         </li>
-
+                                        {% endfor %}
+                                    <br/>
                                     </ul>
                                 </li>
 
                                 <li class="megamenu-static-holder"><a href="{% url 'index' %}">Blog</a>
                                     <ul class="megamenu hb-megamenu">
-                                        <li><a href="{% url 'blog-left' %}">Blog Layouts</a>
-
+                                        {% for general in object_list %}
+                                        <li><a href="{% url 'blog-left' %}">{{ general.title }}</a>
+                                        {% endfor %}
                                         </li>
-
+                                    <br/>
                                         </li>
                                     </ul>
                                 </li>
